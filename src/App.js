@@ -16,7 +16,7 @@ export const App = () => {
 
   return (
     <div className="grid">
-      <Cube />
+      {/* <Cube /> */}
       <Panel data={theColors}/>
       <GuitarMesh setColors={setColors}/>
     </div>

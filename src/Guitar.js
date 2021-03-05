@@ -28,7 +28,7 @@ export const Guitar = (props) => {
   useFrame((state) => {
     const t = state.clock.getElapsedTime() / 4
     // ref.current.rotation.z = 0 - (1 + Math.sin(t)) / 2
-    // ref.current.rotation.z += 0.004
+    ref.current.rotation.z += 0.004
   })
 
   // Cursor showing current color
@@ -101,7 +101,7 @@ export const GuitarMesh = (props) => {
       <Canvas concurrent pixelRatio={[1, 1.5]} camera={{ position: [0, 0, 10] }}>
         <ambientLight intensity={0.4} />
         <spotLight intensity={0.2} angle={0.1} penumbra={1} position={[5, 25, 20]} />
-        <Effects multisamping={64} renderIndex={10}/>
+        {/* <Effects multisamping={.2} renderIndex={2}/> */}
         <Suspense fallback={null}>
           <Guitar setColors={props.setColors} />
           <Environment files="royal_esplanade_1k.hdr" />

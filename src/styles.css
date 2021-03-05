@@ -13,14 +13,14 @@ body,
 }
 
 body {
-  background: white;
+  background: transparent;
   font-family: "Inter var", sans-serif;
   display: flex;
   justify-content: center;
 }
 
 #root {
-  width: 76ch;
+  /* width: 76ch; */
 }
 
 .material_tag {
