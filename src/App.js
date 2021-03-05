@@ -1,17 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {Panel} from './Panel';
-import Guitar from './Guitar';
+import {GuitarMesh} from './Guitar';
 import Cube from './Cube';
 
-export default function App() {
-  const getColors = (colors) => {
-    alert(colors);
-  };
+export const App = () => {
+
+  const [theColors, setColors] = useState({});
+  useEffect((data) => {
+    console.log(data)
+  }, []);
+
+  // const setColors = (colors) => {
+  //   theColors = {current: colors.current, items: colors.items};
+  // };
+
   return (
     <div className="grid">
       <Cube />
-      <Panel />
-      <Guitar getColors/>
+      <Panel data={theColors}/>
+      <GuitarMesh setColors={setColors}/>
     </div>
   )
 }
